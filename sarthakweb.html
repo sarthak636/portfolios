@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarthak Kotkar - Data Analyst</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --primary: #227fdc;
+      --background: #f4f4f4;
+      --text: #333;
+    }
+    [data-theme="dark"] {
+      --primary: #0a549e;
+      --background: #1a1a1a;
+      --text: #a50e0e;
+    }
+    body {
+      font-family: 'Edu NSW ACT Hand Cursive';
+      margin: 0;
+      padding: 0;
+      background-color: var(--background);
+      color: var(--text);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    header {
+      background-color: var(--primary);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      word-wrap: break-word;
+    }
+    #typed {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--primary);
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      flex-wrap: wrap;
+    }
+    nav .logo {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    nav .links {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 15px;
+    }
+    nav .links a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 5px 10px;
+      white-space: nowrap;
+    }
+    nav button {
+      background: none;
+      border: 1px solid white;
+      color: white;
+      padding: 5px 10px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    h2 {
+      color: var(--primary);
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 5px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    .project-card {
+      border: 1px solid #ccc;
+      padding: 15px;
+      border-radius: 10px;
+      background-color: white;
+      transition: transform 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+    .contact-form button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    footer {
+      background-color: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 10px;
+    }
+    .socials a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 24px;
+    }
+    .profile-img {
+      width: 130px;
+      border-radius: 50%;
+      margin: 20px auto;
+      display: block;
+      border: 4px solid var(--primary);
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 28px;
+      }
+      #typed {
+        font-size: 16px;
+      }
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav .links {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      nav .links a {
+        font-size: 14px;
+        padding: 8px 12px;
+      }
+      nav button {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .container {
+        padding: 0 10px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      .project-card {
+        padding: 10px;
+      }
+      .contact-form input,
+      .contact-form textarea {
+        font-size: 14px;
+        padding: 8px;
+      }
+      .contact-form button {
+        font-size: 14px;
+        padding: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 30px;
+      }
+      #typed {
+        font-size: 14px;
+      }
+      nav .links {
+        flex-direction: column;
+        gap: 8px;
+      }
+      nav .links a {
+        padding: 6px 8px;
+      }
+      .socials a {
+        font-size: 20px;
+        margin: 0 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Sarthak Kotkar</div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#project">Project</a>
+      <a href="#contact">Contact</a>
+      <button onclick="toggleTheme()">🌓</button>
+    </div>
+  </nav>
+
+  <header>
+    <img src="C:\Users\Admin\Downloads\photo20241002145612.jpg" alt="Profile" class="profile-img" />
+    <h1>Sarthak Raosaheb Kotkar</h1>
+    <p id="typed"></p>
+    <p>Pune, Katraj | sarthakkotkar111@gmail.com | 8010353454</p>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/sarthak-kotkar-432a4130b/"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/sarthakkotkar"><i class="fab fa-github"></i></a>
+    </div>
+  </header>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am a passionate and detail-oriented Data Analyst with strong skills in
+        data analysis, reporting, and dashboard creation. With experience in Python,
+        SQL, Excel, Power BI, HTML, and CSS, I turn data into insights that drive
+        decisions. Eager to contribute to real-world data-driven projects.
+      </p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Bachelor of Computer Applications (BCA)</strong><br />
+         University of Mysore, Karnataka</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Python</li>
+        <li>SQL</li>
+        <li>Excel</li>
+        <li>Power BI</li>
+        <li>HTML & CSS</li>
+      </ul>
+    </section>
+
+    <section id="project">
+      <h2>Project: Mahapanchayat</h2>
+      <div class="project-card">
+        <strong>Mahapanchayat – Panchayat Management System</strong>
+        <p>A web-based platform for managing Gram Panchayat services and certificates.</p>
+        <ul>
+          <li>Citizen data management and certificate generation</li>
+          <li>Admin dashboard for Gram Panchayat officers</li>
+          <li>Technologies: HTML, CSS, JS, MySQL, (backend as applicable)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Sarthak Kotkar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Typing animation
+    const roles = ["Data Analyst", "Python Developer", "SQL Specialist", "Power BI User"];
+    let i = 0,
+      j = 0,
+      current = "",
+      isDeleting = false;
+    function type() {
+      if (i < roles.length) {
+        if (!isDeleting && j <= roles[i].length) {
+          current = roles[i].substring(0, j++);
+        } else if (isDeleting && j >= 0) {
+          current = roles[i].substring(0, j--);
+        }
+        document.getElementById("typed").textContent = current;
+        if (j === roles[i].length + 1) isDeleting = true;
+        if (j < 0) {
+          isDeleting = false;
+          i = (i + 1) % roles.length;
+        }
+      }
+      setTimeout(type, isDeleting ? 80 : 150);
+    }
+    type();
+
+    // Dark/light mode toggle
+    function toggleTheme() {
+      document.body.dataset.theme = document.body.dataset.theme === "dark" ? "" : "dark";
+    }
+  </script>
+</body>
+</html>
